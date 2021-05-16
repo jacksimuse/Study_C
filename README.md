@@ -1,2 +1,2 @@
-# Study_C
-C언어 리포지토리
+# Study-C
+C 언어 공부
