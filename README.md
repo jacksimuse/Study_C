@@ -2,6 +2,27 @@
 C 언어 공부
 
 ## C언어를 통한 Fitness 회원 관리 프로그램(평가)
+
+- Fitness 회원관리 프로그램
+신규회원 등록은 회원 번호와 이름, 체중을 입력하고 heap영역에 저장한다.
+회원 번호로 음수를 입력하면 입력이 종료되며, 총 회원 수, 평균 체중, 최고 체중을 갖는 회원의 정보가 출력된다.
+
+---
+사용코드
+```C
+typedef struct {
+	int num;
+	char name[20];
+	double weight;
+} Fitness;
+Fitness* ary[100];					// 포인터 배열 선언
+void total_number(int count);				// 전체 등록 회원 수 반환
+double average_weight(Fitness **pary, int count);	// 평균 체중 반환
+int max_weight(Fitness **pary, int count);		// 최대 체중 회원의 index 반환
+void print_info(Fitness **pary, int index);		// 회원 정보 출력
+void free_ary(Fitness **pary, int count);		// 동적 할당 영역 해제
+```
+---
 ```C
 #include <stdio.h>
 #include <stdlib.h>
